@@ -68,7 +68,7 @@ inline __attribute__((always_inline)) void cpuid(void) {
   ADD_CODE(p, "or rax, rdx\n"); \
   ADD_CODE(p, "mov r9, rax\n"); \
   ADD_CODE(p, "mov rax, 0\n"); \
-  ADD_CODE(p, "movntdqa r10, [r8]\n");
+  ADD_CODE(p, "movntdqa xmm0, [r8]\n");
 
 #define MEASURE_END() \
   ADD_CODE(p, "rdtsc\n"); \
